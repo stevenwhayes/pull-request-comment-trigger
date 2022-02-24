@@ -16,7 +16,7 @@ async function run() {
     const body =
         (context.eventName === "issue_comment"
             ? context.payload.comment.body
-            : context.payload.pull_request.body) || null;
+            : context.payload.pull_request.body) || '';
     core.setOutput('comment_body', body);
 
     if (
