@@ -22,7 +22,7 @@ async function run() {
         return;
     }
     console.log(context.payload);
-    const body = context.payload.issue.body;
+    const body = context.payload.issue.body || ' ';
     
     console.log(body);
     core.setOutput('comment_body', body);
